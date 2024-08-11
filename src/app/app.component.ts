@@ -9,9 +9,7 @@ import { Post } from './common/interfaces';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'observable-rxjs';
-
-  public postData$?: Observable<Post>;
+  public postData$!: Observable<Post>;
 
   constructor(appDataService: AppDataService) {
     this.postData$ = appDataService.getPost();
